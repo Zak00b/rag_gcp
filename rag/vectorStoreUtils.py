@@ -305,7 +305,5 @@ class VertexAIVectorStore:
         - retriever: The retriever object for the vector store.
         """
         vector_store = self.get_vector_store(embedding_model, datastore_client_kwargs)
+        logger.info("Retriever is ready.")
         return vector_store.as_retriever()
-
-if __name__ == "__main__":
-    print("Hello World")

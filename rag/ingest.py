@@ -64,6 +64,10 @@ if __name__ == "__main__":
 
     config = load_config()
     file_path = config["data"]["path"]
+
+
+    embedding_model = VertexAIEmbeddings(config["ingest"]["embedding_model"])
+    
     vector_store_ai = VertexAIVectorStore(
         project_id=config["vertexai"]["project_id"], 
         region=config["vertexai"]["region"], 
@@ -71,12 +75,6 @@ if __name__ == "__main__":
         index_endpoint_name=config["vertexai"]["index_endpoint_name"], 
         dimensions=config["vertexai"]["dimensions"],
         )
-    
-    datastore_client_kwargs = {
-    'database': 'orangeds',
-    # add other necessary parameters here
-    }
-    embedding_model = VertexAIEmbeddings(config["ingest"]["embedding_model"])
 
     # Ingest text data into Vertex AI Vector Store
     vector_store_ai.upsert(texts, metadatas, embedding_model, config["vertexai"]["data_store_kwargs"])
