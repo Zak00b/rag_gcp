@@ -1,0 +1,32 @@
+# config.yaml
+data : 
+  path: data/docsb.jsonl
+
+vertexai:
+  project_id: orangebot-7551
+  region: europe-west4
+  bucket: orangebot-7551
+  index_name: orange_maroc
+  index_endpoint_name: orange_maroc_endpoint
+  dimensions: 768
+
+ingest:
+# Matching Engine params
+  embedding_model : textembedding-gecko@003
+  chunk_size : 300
+  chunk_overlap : 30
+  
+retrieve:
+  top_k : 2
+  use_mmr : True
+
+llm:
+  model_name : "text-bison@002"
+  max_output_tokens : 1024
+  temperature : 0.2
+  top_p : 0.8
+  top_k : 40
+  verbose : True
+
+langchain:
+  ls_key : ls__f4ef4e47ac2d417fbde23503b2a92283
