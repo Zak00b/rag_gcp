@@ -9,6 +9,8 @@ vertexai:
   index_name: orange_maroc
   index_endpoint_name: orange_maroc_endpoint
   dimensions: 768
+  data_store_kwargs:
+    database: orangeds
 
 ingest:
 # Matching Engine params

@@ -262,7 +262,7 @@ class VertexAIVectorStore:
             - vector_store: The vector store object for the matching engine index.
         """
 
-        vector_store = VectorSearchVectorStoreDatastore.from_components(
+        return VectorSearchVectorStoreDatastore.from_components(
             project_id=self.project_id,
             region=self.region,
             index_id=self.get_index().name,
@@ -271,8 +271,7 @@ class VertexAIVectorStore:
             datastore_client_kwargs=datastore_client_kwargs,
             stream_update=True,
         )
-        return vector_store
-
+    
     def upsert(self, texts, metadatas, embedding_model, datastore_client_kwargs):
         # create datastore first 
         """
