@@ -1,4 +1,4 @@
-from vectorStoreUtils import VertexAIVectorStore
+from rag.vdb.vectorStoreUtils import VertexAIVectorStore
 from utils import load_config
 
 if __name__ == "__main__":

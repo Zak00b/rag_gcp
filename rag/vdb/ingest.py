@@ -1,5 +1,5 @@
 """Load html from files, clean up, split, ingest into Qdrant."""
-from vectorStoreUtils import VertexAIVectorStore
+from rag.vdb.vectorStoreUtils import VertexAIVectorStore
 from utils import load_config
 from langchain_google_vertexai import VertexAIEmbeddings
 
