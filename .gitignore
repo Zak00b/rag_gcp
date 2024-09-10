@@ -1,0 +1,4 @@
+# Ignore data_senegal folder and its contents
+/data_senegal/*
+/senegal_test/*
+.env

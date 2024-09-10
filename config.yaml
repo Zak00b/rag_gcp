@@ -2,6 +2,9 @@
 data : 
   path: data/docsb.jsonl
 
+scrape:
+  url: https://www.orange.sn
+
 vertexai:
   project_id: orangebot-7551
   region: europe-west4
